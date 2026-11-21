@@ -132,14 +132,6 @@ section{padding:110px 5vw;max-width:1200px;margin:0 auto}
 .chip b{color:var(--aqua);font-weight:600}
 
 /* DiD demo */
-.did{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:22px;padding:36px}
-.did h3{font-family:var(--serif);font-size:1.5rem;margin-bottom:8px}
-.did .lead{color:var(--muted);font-size:.95rem;margin-bottom:20px}
-.did table{width:100%;border-collapse:separate;border-spacing:8px}
-.did th{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;text-align:left}
-.did input{width:100%;background:rgba(2,15,21,.6);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:10px 12px;font:600 1rem var(--sans)}
-.did input:focus{outline:2px solid var(--aqua);outline-offset:1px}
-.did .unit{font-size:.82rem;color:var(--muted);margin-top:6px}
 .result{display:flex;flex-direction:column;justify-content:center}
 .result .big{font-family:var(--serif);font-size:clamp(2.6rem,5vw,3.8rem);font-weight:700;color:var(--aqua);line-height:1}
 .result .lbl{color:var(--muted);margin-top:6px}
@@ -181,8 +173,7 @@ section{padding:110px 5vw;max-width:1200px;margin:0 auto}
 footer{text-align:center;color:var(--muted);font-size:.85rem;padding:40px 5vw 50px}
 
 @media (max-width:960px){
-  .about-grid,.wd-hero,.did,.two,.contact{grid-template-columns:1fr}
-  .cards,.awards{grid-template-columns:1fr 1fr}
+  .about-grid,.wd-hero,  .cards,.awards{grid-template-columns:1fr 1fr}
   .stats,.wd-feats{grid-template-columns:1fr 1fr}
   nav ul{display:none;position:absolute;top:100%;right:5vw;flex-direction:column;gap:14px;padding:20px 24px;background:rgba(3,24,32,.95);border:1px solid var(--line);border-radius:14px}
   nav ul.open{display:flex}
@@ -190,8 +181,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:40px 5vw 50
   .hero-grid{grid-template-columns:1fr;gap:34px}
   .portrait{order:-1;width:min(260px,62vw);justify-self:start}
   .hero{padding-top:100px}
-  .wd-hero,.did,.contact{padding:28px}
-}
+  .wd-hero,}
 @media (max-width:600px){
   .cards,.awards,.stats,.wd-feats,.links{grid-template-columns:1fr}
   section{padding:80px 6vw}
@@ -305,8 +295,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:40px 5vw 50
         <p>WatDIMP is an interactive, computer-based model for assessing the impact of watershed development programmes. It began as WADIAM and was rebuilt with support from the Department of Science and Technology, Government of India, adding interactive utilities, menus and options.</p>
         <p style="margin-top:14px">The model also carries reference material on watershed development concepts, programme guidelines and impact assessment methods.</p>
         <div class="cta" style="margin-top:26px">
-          <a class="btn primary" id="watdimpLaunch" href="#watdimp" title="Replace with the live WatDIMP address">Launch WatDIMP →</a>
-          <a class="btn ghost" href="#did">Try the method</a>
+          <a class="btn primary" id="watdimpLaunch" href="watdimp.html">Launch WatDIMP →</a>
         </div>
       </div>
       <canvas id="cube" aria-label="Animated 3D watershed terrain"></canvas>
@@ -326,28 +315,6 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:40px 5vw 50
       <span class="chip"><b>Livestock</b> &amp; livelihoods</span>
       <span class="chip"><b>Ecosystem</b> services</span>
       <span class="chip"><b>Overall</b> impact summary</span>
-    </div>
-
-    <div class="did glass reveal" id="did">
-      <div>
-        <h3>Double difference, in one minute</h3>
-        <p class="lead">Enter an indicator, such as average farm income, for watershed (project) and control villages, before and after the programme. The impact is the change in the project group minus the change in the control group.</p>
-        <table>
-          <tr><th></th><th>Before</th><th>After</th></tr>
-          <tr><th>Project</th><td><input id="pb" type="number" value="42000" inputmode="decimal" aria-label="Project before"></td><td><input id="pa" type="number" value="61000" inputmode="decimal" aria-label="Project after"></td></tr>
-          <tr><th>Control</th><td><input id="cb" type="number" value="41000" inputmode="decimal" aria-label="Control before"></td><td><input id="ca" type="number" value="48000" inputmode="decimal" aria-label="Control after"></td></tr>
-        </table>
-        <p class="unit">Illustrative values in ₹ per hectare per year.</p>
-      </div>
-      <div class="result">
-        <div class="big" id="didOut">₹12,000</div>
-        <div class="lbl" id="didLbl">Programme impact per hectare per year</div>
-        <div class="bars">
-          <div class="bar"><span>Project change</span><i id="barP"></i><em id="valP"></em></div>
-          <div class="bar"><span>Control change</span><i id="barC" class="ctl"></i><em id="valC"></em></div>
-        </div>
-        <p class="note">WatDIMP runs this, and much more, across many household, farm, village and ecosystem indicators at once.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -432,7 +399,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:40px 5vw 50
       <a href="https://www.scopus.com/authid/detail.uri?authorId=56619625000" target="_blank" rel="noopener">Scopus<small>56619625000</small></a>
       <a href="https://tnau.irins.org/profile/167113" target="_blank" rel="noopener">IRINS<small>TNAU expert profile</small></a>
       <a href="https://in.linkedin.com/in/suresh-kumar-devarajulu-8724424" target="_blank" rel="noopener">LinkedIn<small>Professional network</small></a>
-      <a href="#watdimp">WatDIMP<small>Watershed impact model</small></a>
+      <a href="watdimp.html">WatDIMP<small>Watershed impact model</small></a>
     </div>
   </div>
 </section>
@@ -610,22 +577,6 @@ if(pf&&!reduce&&matchMedia('(hover:hover)').matches){
     pf.style.transform='rotateY('+(x*22)+'deg) rotateX('+(-y*22)+'deg)';},{passive:true});
 }
 
-// double-difference demo
-var fmt=new Intl.NumberFormat('en-IN');
-function rupee(v){return (v<0?'−₹':'₹')+fmt.format(Math.abs(Math.round(v)));}
-function did(){
-  var pb=+document.getElementById('pb').value||0, pa=+document.getElementById('pa').value||0,
-      cb=+document.getElementById('cb').value||0, ca=+document.getElementById('ca').value||0;
-  var dP=pa-pb, dC=ca-cb, imp=dP-dC, m=Math.max(Math.abs(dP),Math.abs(dC),1);
-  document.getElementById('didOut').textContent=rupee(imp);
-  var pct=pb?(' ('+(imp/pb*100).toFixed(1)+'% of project baseline)'):'';
-  document.getElementById('didLbl').textContent='Programme impact per hectare per year'+pct;
-  document.getElementById('barP').style.width=(Math.abs(dP)/m*100)+'%';
-  document.getElementById('barC').style.width=(Math.abs(dC)/m*100)+'%';
-  document.getElementById('valP').textContent=rupee(dP);
-  document.getElementById('valC').textContent=rupee(dC);
-}
-['pb','pa','cb','ca'].forEach(function(id){document.getElementById(id).addEventListener('input',did);});did();
 })();
 </script>
 </body>
